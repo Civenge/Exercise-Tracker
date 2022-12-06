@@ -1,6 +1,6 @@
 # To run the App, have Node version 16.X installed.  Then open files and run in the terminal for each folder (react and rest folders):
 npm install
-# then to start each server:
+# Then to start each server:
 npm start
 
 # Exercise-Tracker
