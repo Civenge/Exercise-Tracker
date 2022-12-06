@@ -3,7 +3,7 @@ npm install
 # Then to start each server:
 npm start
 
-# Exercise-Tracker
+# Exercise-Tracker Project Requirements
 Data for the App
 You will store the data in MongoDB in a collection named exercises. Each document in the collection must have the following properties (i.e., all properties are required):
 
