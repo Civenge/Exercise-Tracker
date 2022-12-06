@@ -16,7 +16,7 @@ date	String 	The date the exercise was performed. Specified as MM-DD-YY, e.g., 0
 REST API Web Service
 You must implement a REST API that supports CRUD operations by implementing the following 4 endpoints:
 
-1. Create using POST /exercises
+#1. Create using POST /exercises
 Request
 The request body will be a JSON object with the 5 properties listed in the data model.
 The POST request will have no path parameters.
@@ -42,7 +42,8 @@ Failure: If the request body is invalid then the following response must be sent
 Body: A JSON object { Error: "Invalid request"}
 Content-type: application/json.
 Status code: 400.
-2. Read using GET /exercises
+
+#2. Read using GET /exercises
 Request
 No path parameter.
 No request body (you don't need to validate this).
@@ -52,7 +53,8 @@ If the collection is empty, the response will be an empty array
 Each document in the collection must be a JSON object with all the properties of the document including the ID.
 Content-type: application/json.
 Status code: 200.
-3. GET using GET /exercises/:_id
+
+#3. GET using GET /exercises/:_id
 Request
 The path parameter will contain the ID of the document.
 No request body (you don't need to validate this).
@@ -65,7 +67,8 @@ Failure:  If no document exists with the specified ID, the following response mu
 Body: A JSON object { Error: "Not found"}
 Content-type: application/json.
 Status code: 404.
-4. Update using PUT /exercises/:_id
+
+#4. Update using PUT /exercises/:_id
 Request
 The request body will be a JSON object with all the 5 properties listed in the data model.
 The date property will be in the format MM-DD-YY, e.g., 06-24-21.
@@ -84,7 +87,8 @@ Body: A JSON object { Error: "Not found"}
 Content-type: application/json.
 Status code: 404.
 Note: first check the validity of the request body and if it is invalid, return the response with status code 400. Only look for the existence of the document if the request body is valid.
-5. DELETE using DELETE /exercises/:_id
+
+#5. DELETE using DELETE /exercises/:_id
 Request
 The path parameter will contain the ID of the document.
 There will not be a request body (you don't need to validate this).
@@ -113,13 +117,14 @@ When testing your program we will change the value of this string to the MongoDB
 Use ES Modules
 Your REST API code must use ES modules (i.e., you cannot use Common JS modules)
 
-React UI
+#React UI
 The UI must have the following 3 pages:
 
 Home Page.
 Edit Exercise Page.
 Create Exercise Page.
-Home Page
+
+#Home Page
 This page is rendered when the app starts up.
 The page must display the data for all the exercises stored in MongoDB.
 The page must get the data by calling the endpoint GET /exercises in the REST API.
@@ -133,7 +138,8 @@ You must implement a React component for the table and another for the row. You 
 This page must include a way for the user to go to the Create Exercise Page.
 It is your choice how you present this functionality as long as it is clear how the user can go to that page.
 For example, you can provide a link or an icon with informational text.
-Edit Exercise Page
+
+#Edit Exercise Page
 This page will allow the user to edit the specific exercise for which the user clicked the edit icon.
 The controls to edit the exercise must be pre-populated with the existing data for that row.
 You must provide a button that
@@ -144,7 +150,8 @@ Automatically takes the user back to the Home page.
 If the update is unsuccessful (i.e., the response status is not 200), then
 Shows an alert to the user with a message about the update having failed, and
 Automatically takes the user back to the Home page. 
-Create Exercise Page
+
+#Create Exercise Page
 This page will allow the user to add a new exercise to the database.
 You must provide input controls for the user to enter the 5 required properties.
 You must provide a button that:
@@ -155,7 +162,8 @@ Automatically takes the user back to the Home page.
 If the creation is unsuccessful (i.e., the response status is not 201), then
 Shows an alert to the user with a message about the exercise creation having failed, and
 Automatically takes the user back to the Home page.
-Technical Requirements
+
+#Technical Requirements
 Function-Based Components
 Your React components must be function-based. You are not allowed to define class-based components.
 Use the React Functionality Discussed in the Course
@@ -164,7 +172,8 @@ In particular, you cannot use frameworks like Next.js.
 Use a .env file & set the proxy property
 Your React app must use a .env file with a variable PORT=8000 which is the port on which the Express server for the React app will receive HTTP requests.
 You must add the proxy property to the React app's package.json file as discussed in the exploration.
-CSS
+
+#CSS
 Update and add rules to the existing App.css file that resides in the /src folder. Note that specifying black, white, and Times New Roman font are not allowed (because they are already the defaults).
 
 Global page design:
@@ -175,7 +184,8 @@ Form
 Add input, and button rules that include the same font-family as the body
 This is needed because the form elements do not inherit the font-family from body by default
 Note: you are allowed to add additional rules beyond the required rules listed above.
-Design Features
+
+#Design Features
 You must use a <select> element to provide the options for selecting the value of units in the Edit Exercise Page and the Create Exercise Page.
 You need to add semantic page layout tags in the App.js file, including at least the following:
 The <header> tag will include a heading level 1 <h1> tag to specify the app's name and a paragraph <p> that describes it.
